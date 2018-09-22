@@ -1,0 +1,10 @@
+.navBar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+    color:#ffffff;
+    background-color: #222b30;
+    position:sticky;
+    top:-1px;
+}

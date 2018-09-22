@@ -1,0 +1,35 @@
+<div style="display:grid;background-color:#222b30;grid-template-columns: 0.7fr 1.6fr 1fr 1fr;" class="">
+    <div style="align-self:end" class="ma2">
+        {{#power-select
+        options=genres
+        placeholder="Choose Genre"
+        searchPlaceholder="Type to Search..."
+        selected=genre
+        
+        onclose=(action "filterBooks")
+        onchange=(action (mut genre))
+        as |book|
+        }}
+        
+        {{book}}
+        {{/power-select}}
+    </div>
+    <div  style="justify-self:end;" class="ma2">
+        <input class="form-control" type="text" value="" placeholder="Enter to search">
+    </div>
+    <div style="" class="ma2">
+        <button class="btn btn-default">Search</button>
+    </div>
+     <div style="justify-self:end;" class="ma2">
+        <button class="btn btn-default" {{action "addBook"}}>New Book</button>
+    </div>
+</div>
+
+
+
+   
+{{add-book showModal=showAddModal}}
+
+{{book-compo model=displayBooks}}
+
+{{outlet}}

@@ -1,0 +1,12 @@
+
+{{#each model as |book|}}
+  <div style="float:left;display:flex;flex-direction:column;justify-content:center" class="avenir tc grow br3 pa3 bg-light-gray ma2  bw2 shadow-5">
+  <h2 class="pa3 ma3">{{book.name}}</h2>
+  <div class="f3 pa3 ma3">By, Ramesh</div>
+  <div class="f3 pa2 ma2">Genre: {{book.genre}}</div>
+  {{!-- <div class="f3 pa2 ma2">Language: {{book.language}}</div>
+  <div class="f3 pa2 ma2">Published On: {{book.publication_date}}</div>
+  <div class="f3 pa2 ma2">Published By: {{book.publisher}}</div> --}}
+  </div>
+{{/each}}
+{{yield}}
